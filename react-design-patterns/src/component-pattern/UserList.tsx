@@ -4,7 +4,7 @@ export default function UserList({ data }: { data: any }) {
   console.log("users: ", data);
   return (
     <ul>
-      {data?.users.map((user: any) => (
+      {data?.users?.map((user: any) => (
         <li key={user.id}>
           {user.firstName}
           {user.lastName}
