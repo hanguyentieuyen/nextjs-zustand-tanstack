@@ -3,6 +3,7 @@ import UserContainer from "./component-pattern/UserContainer";
 import ContentModal from "./compound-components/ContentModal";
 import GroupButton from "./factory-pattern/GroupButton";
 import HoCwithButton from "./higher-order-component/HoCwithButton";
+import ProviderPattern from "./provider-pattern/Provider";
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
       {/* <HoCwithButton />
       <UserContainer />
       <GroupButton /> */}
-      <ContentModal />
+      {/* <ContentModal /> */}
+      <ProviderPattern />
     </>
   );
 }

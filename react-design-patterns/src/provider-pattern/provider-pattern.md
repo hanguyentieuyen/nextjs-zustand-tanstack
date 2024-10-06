@@ -1,0 +1,1 @@
+- Provider pattern giúp cho việc truyền data từ component cha cho các component con ko bị tình trạng props drilling (pass data through multiple layer).
