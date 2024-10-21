@@ -1,0 +1,32 @@
+{
+  "name": "next-urql-langs-rbac",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "graphql": "^16.9.0",
+    "i18next": "^23.16.2",
+    "next": "14.2.15",
+    "next-auth": "^4.24.8",
+    "next-i18next": "^15.3.1",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-i18next": "^15.0.3",
+    "urql": "^4.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.7",
+    "@types/react": "^18.3.11",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.15",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.6.3"
+  }
+}
