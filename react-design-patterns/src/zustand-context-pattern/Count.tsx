@@ -3,7 +3,8 @@ import CountProvider, { useCountStore } from "./CountProvider";
 type CountProps = {
   initialCount: number;
 };
-export default function Count({ initialCount = 1 }): CountProps {
+
+export default function Count({ initialCount = 0 }: CountProps) {
   return (
     <CountProvider initialCount={initialCount}>
       <SubComponentCount />
@@ -13,6 +14,6 @@ export default function Count({ initialCount = 1 }): CountProps {
 
 function SubComponentCount() {
   const count = useCountStore((state) => state.count);
-  console.log(count);
+  console.log("Zustand with context api pattern: ", count);
   return null;
 }

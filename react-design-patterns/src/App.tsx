@@ -4,6 +4,7 @@ import ContentModal from "./compound-components/ContentModal";
 import GroupButton from "./factory-pattern/GroupButton";
 import HoCwithButton from "./higher-order-component/HoCwithButton";
 import ProviderPattern from "./provider-pattern/Provider";
+import Count from "./zustand-context-pattern/Count";
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
       <UserContainer />
       <GroupButton /> */}
       {/* <ContentModal /> */}
-      <ProviderPattern />
+      {/* <ProviderPattern /> */}
+      <Count initialCount={299} />
     </>
   );
 }

@@ -1,14 +1,16 @@
 import { createContext, PropsWithChildren, useContext, useState } from "react";
+import { createStore, StoreApi, useStore } from "zustand";
 
 type CountStore = {
+  count: number;
   inc: () => void;
 };
+
+const CountContext = createContext<StoreApi<CountStore> | undefined>(undefined);
 
 type CountProviderProps = PropsWithChildren & {
   initialCount: number;
 };
-
-const CountContext = createContext<StoreApi<CountStore> | undefined>(undefined);
 
 export default function CountProvider({
   children,
@@ -20,15 +22,19 @@ export default function CountProvider({
       inc: () => set((state) => ({ count: state.count + 1 })),
     }))
   );
+
   return (
     <CountContext.Provider value={store}>{children}</CountContext.Provider>
   );
 }
 
+// eslint-disable-next-line react-refresh/only-export-components
 export function useCountStore<T>(selector: (state: CountStore) => T) {
   const context = useContext(CountContext);
+
   if (!context) {
     throw new Error("CountContext.Provider is missing");
   }
-  return useContext(context, selector);
+
+  return useStore(context, selector);
 }
